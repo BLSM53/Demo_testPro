@@ -3,7 +3,7 @@ body {
 	width: 100%;
 	min-height: 2910px;
 	min-width: 1617px;
-	background: #fff;
+	background: #f8f8f8;
 	font-family: "微软雅黑";
 }
 
@@ -47,88 +47,129 @@ html {
 	cursor: pointer;
 }
 
-.header {
-	position: relative;
-	margin: 0 auto;
-	height: 91px;
-	width: 1617px;
-	line-height: 91px;
-	vertical-align: middle;
+
+
+.header{
+	height:89px;
+	line-height: 89px;
+	width: 1208px; 
+	margin-left: auto; 
+	margin-right: auto;
+	overflow: hidden;
+	zoom: 1;
 }
 
-.logo {
-	display: block;
-	margin-top: 35px;
-	margin-left: 209px;
+.header-logo{
+	height: 89px;
+	padding-left: 5px;
+	margin-top: -4px;
 	float: left;
 }
 
-.logo-name {
-	float: left;
-	height: 22px;
-	vertical-align: top;
+.logo{
+	display:inline-block;
 	font-size: 22px;
 }
 
-.attention {
-	position: absolute;
-	color: #fff;
-	height: 22px;
-	width: 54px;
-	background: #21a557;
-	text-align: center;
+.logo-png{
+	display: inline-block;
+	line-height: 18px;
+	font-size: 28px;	
 	vertical-align: middle;
-	border: none;
+}
+
+.ft-logo-title{
+	color: #39A030;
+	vertical-align: middle;
+}
+
+.header-fans {
+	background: url(../img/plus.png) 0 0 no-repeat #21a557;
+	background-position: 9px 7px;
+}
+
+.header-fans,.header-fans-active{
+	display: inline-block;	
+	padding: 0 9px;	
+	line-height: 21px;
+	margin-left: 27px;	
+	text-align: center;
+	background-color: #21a557;
+	color: #fff;
 	border-radius: 2px;
-	margin-top: 35px;
-	margin-left: 14px;
-	line-height: 22px;
+	cursor:pointer;
+}
+
+.header-fans-active{
+	background: url(../img/bk_check.png) 0 0 no-repeat #f8f8f8;
+	background-position: 9px 7px;
+	color: #333;
+	cursor:default;
+	border: 1px solid #efefef;
+}
+
+.header-fans:hover{
+	background-color: #2FB556;
+}
+
+.header-fans-focus{
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.header-fans-no:hover{
+	color: #21a557;
+	text-decoration: underline;
 	cursor: pointer;
 }
 
-.attention:hover {
-	background: #2FB556;
+.header-fans-num{
+	display: inline-block;
+	padding-left: 14px;
 }
 
-.fans {
-	position: absolute;
-	margin-left: 82px;
-	font-size: 13px;
-}
-
-.interlinking {
+.header-nav{
+	height: 89px;
 	float: right;
-	padding-top: 5px;
-	margin-right: 220px;
-	width: 410px;
-	height: 20px;
 }
 
-.wangyi-open {
-	font-size: 15px;
-	color: gray;
+.header-nav-list {
+	float: left;
 }
 
-.wangyi-cloudclass {
-	margin-left: 56px;
-	color: gray;
-	font-size: 15px;
+.header-nav-link{
+	font-size: 16px;
+	padding-left: 52px;
+	color: #666666;
 }
 
-.uni-Mooc {
-	margin-left: 58px;
-	color: gray;
-	font-size: 15px;
+.header-nav-link:hover{
+	color: #21a557;
+	text-decoration: none; 
 }
 
-.search {
-	width: 18px;
-	height: 15px;
-	padding-bottom: 5px;
-	font-size: 20px;
-	margin-left: 35px;
-	cursor: pointer;
+.header-search{
+	width: 19px;
+	height: 19px;
+	margin: 35px 15px 0 30px;
+	cursor:pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .center {
 	position: relative;
@@ -151,18 +192,18 @@ html {
 	left: 50%;
 	margin-left: -826px;
 }
-.banner-navLk{
+.banner-img{
 	opacity: 0;	
 	filter:alpha(opacity=0);
 	position: absolute;
 }
-.banner-navLk-active{
+.banner-img-active{
 	position: absolute;	
 	opacity: 1;
 	filter:alpha(opacity=100);
 	transition: 2000ms opacity;	
 }
-.banner-navLk-img{
+.banner-img-png{
 	width: 1652px;
 	height: 460px;
 }
@@ -173,7 +214,7 @@ html {
 	width: 100%;
 	text-align: center;
 }
-.banner-conI,.banner-conI_active{
+.banner-dot,.banner-dot-active{
 	display: inline-block;
 	margin: 0 4px;
 	vertical-align: middle;
@@ -183,7 +224,7 @@ html {
 	border-radius: 50%;
 	cursor:pointer;
 }
-.banner-conI_active{
+.banner-dot-active{
 	background-color: #333;
 	cursor:default;
 }
@@ -202,7 +243,7 @@ html {
 	height: 244px;
 	margin-left: 208px;
 	margin-right: 20px;
-	background: #fff;
+	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
@@ -285,7 +326,7 @@ html {
 	height: 244px;
 	margin-left: 54px;
 	margin-right: 20px;
-	background: #fff;
+	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
@@ -297,7 +338,7 @@ html {
 	height: 244px;
 	margin-left: 54px;
 	margin-right: 20px;
-	background: #fff;
+	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
@@ -330,12 +371,12 @@ html {
 
 
 
-.contentWarp {
+.center-course {
 	background: #f8f8f8;
 }
 
-.content {
-	height: 1551px;
+.course {
+	height: 1512px;
 	width: 1208px; 
 	margin-left: auto; 
 	margin-right: auto;
@@ -343,13 +384,13 @@ html {
 	zoom: 1;
 }
 
-.con-main {
+.course-main {
 	width: 980px;
 	float: left;
 	color: #666;
 }
 
-.main-tit {
+.course-type {
 	width: 400px;
 	height: 50px;
 	margin-bottom: 28px;
@@ -359,7 +400,7 @@ html {
 	zoom: 1;
 }
 
-.con-titI_active, .con-titI{
+.course-type-name-active, .course-type-name{
 	float: left;
 	width: 200px;
 	height: 50px;
@@ -371,19 +412,19 @@ html {
 	cursor: pointer;
 }
 
-.con-titI:hover,.con-titI_active{
+.course-type-name:hover,.course-type-name-active{
 	color: #fff;
 	background: #39a030;
 }
 
-.main-box {
+.course-main-table {
 	height: 1240px;
 	width: 850px;
 	overflow: hidden;
 	zoom: 1;
 }
 
-.main-boxI{
+.course-main-list{
 	float: left;
 	width: 223px;
 	margin-right: 18px;
@@ -396,40 +437,40 @@ html {
 	cursor: pointer;
 }
 
-.main-boxI:hover{
+.course-main-list:hover{
 	box-shadow: 0 2px 20px #e6e6e6,0 -2px 20px #e6e6e6;
 	color: #39a030;
 }
 
-.main-boxI:hover{
+.course-main-list:hover{
 	color: #39a030;
 }
 
-.boxI-txtBox {
+.course-information {
 	padding-left: 4px;
 }
 
-.boxI-img {
+.course-img {
 	width: 223px;
 	height: 124px;
 }
 
-.boxI-txtBox {
+.course-information {
 	padding-left: 4px;
 }
 
-.boxI-tit {
+.course-name {
 	padding-top: 5px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space:nowrap;
 }
 
-.boxI-author {
+.course-source {
 	color: #999;
 }
 
-.boxI-num {
+.course-student-num {
 	display: inline-block;
 	height: 11px;
 	line-height: 11px;
@@ -446,7 +487,7 @@ html {
 	vertical-align: middle;
 }
 
-.boxI-price {
+.course-price {
 	color: #ff3f00;
 	padding-bottom: 3px;
 }
@@ -478,7 +519,7 @@ html {
 	display:inline-block;
 }
 
-.page-numLk {
+.page-number {
 	display:inline-block;
 	width: 20px;
 	height: 20px;
@@ -490,13 +531,13 @@ html {
 	margin-left: 5px;
 }
 
-.page-numLk:hover {
+.page-number:hover {
 	background-color: #9dd8b1;
 	color: #fff;
 	text-decoration: none;
 }
 
-.page-numLk_active {
+.page-number-active {
 	display:inline-block;
 	width: 20px;
 	height: 20px;
@@ -510,18 +551,18 @@ html {
 	background: #9dd8b1;
 }
 
-.page-numLk_active:hover {
+.page-number-active:hover {
 	background-color: #9dd8b1;
 	color: #fff;
 	text-decoration: none;
 }
 
-.con-side {
+.course-side {
 	width: 225px;
 	float: right;
 }
 
-.side-top {
+.company-introduce {
 	padding-bottom: 20px;
 	border: 1px solid #ecebeb;
 	border-top: none;
@@ -529,7 +570,7 @@ html {
 	margin-bottom: 20px;
 }
 
-.side-top-tit {
+.company-introduce-title {
 	padding-bottom: 1px;	
 	padding-left: 20px;
 	font-size: 16px;
@@ -537,7 +578,7 @@ html {
 	border-bottom: 1px solid #ecebeb;
 }
 
-.side-top-intro {
+.company-introduce-video {
 	font-size: 14px;
 	line-height: 32px;
 	padding-top: 11px;
@@ -545,7 +586,7 @@ html {
 	color: #666;	
 }
 
-.side-top-img {
+.company-introduce-img {
 	width: 180px;
 	height: 110px;
 	padding-right: 1px;
@@ -553,13 +594,13 @@ html {
 	cursor: pointer;
 }
 
-.side-con {
+.hot-course {
 	border: 1px solid #ecebeb;
 	border-top: none;
 	background-color: #fff;
 }
 
-.side-con-tit {
+.hot-course-title {
 	font-size: 16px;
 	line-height: 54px;
 	padding-bottom: 2px;
@@ -567,13 +608,13 @@ html {
 	border-bottom: 1px solid #ecebeb;
 }
 
-.side-con-list{
+.hot-course-table{
 	padding: 19px 12px 0 20px;
 	height: 700px;
 	overflow: hidden;
 }
 
-.side-con-listI{
+.hot-course-list{
 	width: 191px;
 	height: 50px;
 	padding-bottom: 20px;
@@ -581,23 +622,24 @@ html {
 	transition: 200ms margin;
 }
 
-.side-con-listI:hover {
+.hot-course-list:hover {
 	cursor: pointer;
 }
 
-.side-img {
+.hot-course-img {
 	float: left;
 	width: 50px;
 	height: 50px;
 }
 
-.side-txtBox{
+.hot-course-introduce{
 	color: #666;
 	float: right;
 	width: 128px;
 }
 
-.side-txtBox-txt{
+.hot-course-introduce-tit{
+	display: inline;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -605,7 +647,7 @@ html {
 	line-height: 14px;	
 }
 
-.side-txtBox-num{
+.hot-course-student{
 	line-height: 36px;
 	height: 36px;
 }
@@ -614,7 +656,7 @@ html {
 	vertical-align: middle;
 }
 
-.out-loginWrap{
+.hide-login-page{
 	background-color: rgba(0,0,0,0); 
 	z-index: -1;
 	transition: 1s background-color;
@@ -625,7 +667,7 @@ html {
 	bottom: 0;
 }
 
-.out-login{
+.hide-login{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -640,12 +682,12 @@ html {
 	background-color: #fff;
 }
 
-.out-login-tit{	
+.hide-login-title{	
 	font-size: 18px;
 	line-height: 58px;
 	color: #444;
 }
-.out-login-ipt{
+.hide-login-input{
 	display: block;
 	width: 293px;
 	height: 45px;
@@ -660,7 +702,7 @@ html {
 	box-shadow: inset 2px 2px 3px #f1f1f1;
 }
 
-.out-login-btn{
+.hide-login-btn{
 	width: 100%;
 	margin-top: 14px;
 	font-size: 16px;
@@ -670,17 +712,17 @@ html {
 	box-shadow: 2px 2px 3px #d5e3da;
 }
 
-.out-login-close{
+.hide-login-close{
 	position: absolute;
-	top: 3px;
-	right: 10px;
+	top: -2px;
+	right: 18px;
 	width: 11px;
 	height: 11px;
-	font-size: 26px;
+	font-size: 22px;
 	cursor:pointer;
 }
 
-.out-videoBoxWrap{
+.hide-video{
 	background-color: rgba(0,0,0,0);
 	z-index: -1;
 	transition: 1s background-color;
@@ -691,7 +733,7 @@ html {
 	bottom: 0;	
 }
 
-.out-videoBox{
+.hide-video-box{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -705,7 +747,7 @@ html {
 	background-color: #fff;		
 }
 
-.out-videoBox-tit{
+.hide-video-para{
 	padding-top: 7px;	
 	font-size: 18px;
 	line-height: 62px;
@@ -713,7 +755,7 @@ html {
 	text-indent: 30px
 }
 
-.out-videoBox-close{
+.hide-video-close{
 	position: absolute;
 	top: 6px;
 	right: 12px;
@@ -723,14 +765,14 @@ html {
 	cursor:pointer;
 }
 
-.out-video{
+.hide-video-play{
 	display: block;
 	padding: 0 30px 40px 31px;
 	width: 889px;
 	height: 567px;
 }
 
-.out-intro{
+.hide-introduce{
 	display: none;
 	position: absolute;
 	background: #fff;
@@ -739,27 +781,27 @@ html {
 	box-shadow: 1px 1px 3px #eeedee,-1px -1px 3px #eeedee;
 }
 
-.out-intro-img{
+.hidehide-introduce-title{
 	width: 223px;
 	height: 124px;
 	padding: 11px 19px 0 11px;
 	float: left;
 }
 
-.out-intro-top{
+.hide-introduce-top{
 	background: #fff;
 	padding-right: 34px;
 	padding-bottom: 25px;
 	zoom: 1;
 }
 
-.out-intro-txtBox{
+.hide-introduce-txtBox{
 	line-height: 20px;
 	width: 150px;
 	float: left;
 }
 
-.out-intro-txtBox-tit{
+.hide-introduce-txtBox-tit{
 	font-size: 18px;
 	line-height: 44px;
 	padding-top: 2px;
@@ -768,7 +810,7 @@ html {
 	white-space: nowrap;
 }
 
-.out-intro-bottom{
+.hide-introduce-bottom{
 	width: 418px;
 	padding: 12px 40px 18px 21px;
 	background: #f8f8f8;
