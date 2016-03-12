@@ -1,179 +1,560 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>网易云课堂</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css"/>
-</head>
-<body>
-	<div class="popup">
-		<p class="smartSpec">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</p>
-		<a class="lookover" href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看></a>
-		<a class="cancel">X 不再提醒</a>
-	</div>
-	<div class="header">
-		<img class="logo" src="img/bk_logo.png">
-		<h2 class="logo-name">网易教育产品部</h2>
-		<input class="attention" type="button"></input>
-		<span class="fans">粉丝45</span>
-		<div class="interlinking">
-			<a class="wangyi-open" href="http://open.163.com/" target="_blank">网易公开课</a>
-			<a class="wangyi-cloudclass" href="http://study.163.com/" target="_blank">云课堂</a>
-			<a class="uni-Mooc" href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
-			<a class="search fa fa-search fa-2x"></a>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>网易云课堂</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css"/>
+	</head>
+	<body>
+		<div class="popup">
+			<p class="smart-spec">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</p>
+			<a class="lookover" href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看></a>
+			<a class="cancel">X 不再提醒</a>
 		</div>
-	</div>
-	<div class="center">
-		<div id="box">
-			<div class="list">
-				<ul>
-            		<li><a href="http://open.163.com/" target="_blank"><img src="img/banner1.jpg" width="1617" height="460" /></a></li>
-            		<li><a href="http://study.163.com/" target="_blank"><img src="img/banner2.jpg" width="1617" height="460" /></a></li>
-            		<li><a href="http://www.icourse163.org/" target="_blank"><img src="img/banner3.jpg" width="1617" height="460" /></a></li>
-       			 </ul>
+		<div class="header">
+			<img class="logo" alt="网易教育产品部" src="img/bk_logo.png">
+			<h2 class="logo-name">网易教育产品部</h2>
+			<button class="attention" type="button"><i class="plus fa fa-plus"> 关注</i></button>
+			<span class="fans">粉丝45</span>
+			<div class="interlinking">
+				<a class="wangyi-open" href="http://open.163.com/" target="_blank">网易公开课</a>
+				<a class="wangyi-cloudclass" href="http://study.163.com/" target="_blank">云课堂</a>
+				<a class="uni-Mooc" href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+				<a class="search fa fa-search fa-2x"></a>
 			</div>
 		</div>
-		<div class="product">
-			<div class="wangyi-open-interview">
-				<div class="wangyi-open-icon">
-					<img class="bk-openclass" src="img/bk_openClass.png">
-				</div>
-				<h3 class="product-title">网易公开课</h3>
-				<p class="product-para">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道
-				   搭建起强有力的网络视频教学平台。</p>
-				<a class="more" href="http://open.163.com/" target="_blank">了解更多 ></a>
+		<div class="center">
+			<div class="banner" id="banner">
+				<nav class="banner-nav">
+					<a class="banner-navLk-active" href="http://open.163.com/" target="_blank">
+						<img class="banner-navLk-img" src= "img/banner1.jpg">
+					</a>
+					<a class="banner-navLk" href="http://study.163.com/" target="_blank">
+						<img class="banner-navLk-img" src= "img/banner2.jpg">
+					</a>
+					<a class="banner-navLk" href="http://www.icourse163.org/" target="_blank">
+						<img class="banner-navLk-img" src= "img/banner3.jpg">
+					</a>
+				</nav>
+				<ul class="banner-con">
+					<li class="banner-conI_active"></li>
+					<li class="banner-conI"></li>
+					<li class="banner-conI"></li>
+				</ul>
 			</div>
-			<div class="wangyi-cloud-interview">
-				<div class="wangyi-open-icon">
-					<img class="bk-openclass" src="img/bk_cloudClass.png">
+			<div class="product">
+				<div class="wangyi-open-interview">
+					<div class="wangyi-open-icon">
+						<div class="wangyi-open-icon-pic">
+						</div>
+					</div>
+					<h3 class="product-title">网易公开课</h3>
+					<p class="product-para">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道
+					   搭建起强有力的网络视频教学平台。</p>
+					<a class="more" href="http://open.163.com/" target="_blank">了解更多 ></a>
 				</div>
-				<h3 class="product-title">云课堂</h3>
-				<p class="product-para">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验自由开放的交流互动环境。</p>
-				<a class="more" href="http://study.163.com/" target="_blank">了解更多 ></a>
+				<div class="wangyi-cloud-interview">
+					<div class="wangyi-open-icon">
+						<div class="wangyi-cloud-icon-pic">
+						</div>
+						
+					</div>
+					<h3 class="product-title">云课堂</h3>
+					<p class="product-para">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验自由开放的交流互动环境。</p>
+					<a class="more" href="http://study.163.com/" target="_blank">了解更多 ></a>
+				</div>
+				<div class="wangyi-mooc-interview">
+					<div class="wangyi-open-icon">
+						<div class="wangyi-mooc-icon-pic">
+						</div>
+					</div>
+					<h3 class="product-title">中国大学MOOC</h3>
+					<p class="product-para">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的的大学课程，学完还能获得认证证书。</p>
+					<a class="more" href="http://www.icourse163.org/" target="_blank">了解更多 ></a>
+				</div>
 			</div>
-			<div class="wangyi-mooc-interview">
-				<div class="wangyi-open-icon">
-					<img class="bk-openclass" src="img/bk_Mooc.png">
-				</div>
-				<h3 class="product-title">中国大学MOOC</h3>
-				<p class="product-para">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的的大学课程，学完还能获得认证证书。</p>
-				<a class="more" href="http://www.icourse163.org/" target="_blank">了解更多 ></a>
+			<div class="work-space">
+				<ul class="work-space-table">
+					<li class="work-space-list"><img class="work-space-pic" src="img/bk_scene01.png"></li>
+					<li class="work-space-list"><img class="work-space-pic" src="img/bk_scene02.png"></li>
+					<li class="work-space-list"><img class="work-space-pic" src="img/bk_scene03.png"></li>
+					<li class="work-space-list"><img class="work-space-pic" src="img/bk_scene04.png"></li>
+					<li class="work-space-list"><img class="work-space-pic" src="img/bk_scene05.png"></li>
+				</ul>
 			</div>
-		</div>
-		<div class="work-space">
-			<img src="img/bk_scene01.png">
-			<img src="img/bk_scene02.png">
-			<img src="img/bk_scene03.png">
-			<img src="img/bk_scene04.png">
-			<img src="img/bk_scene05.png">
-		</div>
-		<div class="course">
-			<div id="tab" class="course-tab">
-				<div class="course-type">
-					<ul>
-						<li class="cur">产品设计</li>
-						<li>编程语言</li>
-					</ul>
-				</div>
-				<div class="course-list">
-					<div class="cur">
-						<div class="course-table">
-							<ul class="list">
-									<li class="course1-1"></li>
-									<li class="course1-2"></li>
-									<li class="course1-3"></li>
-									<li class="course1-4"></li>
-									<li class="course2-1"></li>
-									<li class="course2-2"></li>
-									<li class="course2-3"></li>
-									<li class="course2-4"></li>
-									<li class="course3-1"></li>
-									<li class="course3-2"></li>
-									<li class="course3-3"></li>
-									<li class="course3-4"></li>
-									<li class="course4-1"></li>
-									<li class="course4-2"></li>
-									<li class="course4-3"></li>
-									<li class="course4-4"></li>
-									<li class="course5-1"></li>
-									<li class="course5-2"></li>
-									<li class="course5-3"></li>
-									<li class="course5-4"></li>
+			
+			<div class="contentWarp">
+				<div class="content">
+					<div class="con-main">
+						<ul class="main-tit" id="mainTit">
+							<li class="con-titI_active">产品设计</li>
+							<li class="con-titI">编程语言</li>
+						</ul>
+						<ul compact="main-box" id="mainBox">
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_01.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+									</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_02.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_03.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_04.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_05.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_06.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_07.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_08.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_09.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_10.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_11.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_12.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_13.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_14.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_15.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_16.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_17.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_18.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_19.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+							<li class="main-boxI">
+								<img class="boxI-img" src="img/images/course_01.png" alt="网易云课堂">
+								<div class="boxI-txtBox">
+									<h3 class="boxI-tit">手绘系列教程</h3>
+									<p class="boxI-author">几分钟网</p>
+									<p class="boxI-num">
+										<span class="people fa fa-user"></span>
+										<span>445</span>
+									</p>
+									<p class="boxI-price">￥0</p>
+									<h4 style="display:none" data-name="手绘画系列教程" data-bigphotourl="img/images/course_01.png" data-provider="几分钟网" data-learnercount="57" data-price="0" data-categoryname="手绘设计" data-description="生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！"></h4>
+								</div>
+							</li>
+						</ul>
+						<div class="main-page" id="mainPage">
+							<span class="page-left"><</span>
+							<nav class="page-num">
+								<a class="page-numLk" href="javascript:;">1</a>
+								<a class="page-numLk_active" href="javascript:;">2</a>
+								<a class="page-numLk" href="javascript:;">3</a>
+								<a class="page-numLk" href="javascript:;">4</a>
+								<a class="page-numLk" href="javascript:;">5</a>
+								<a class="page-numLk" href="javascript:;">6</a>
+								<a class="page-numLk" href="javascript:;">7</a>
+								<a class="page-numLk" href="javascript:;">8</a>
+							</nav>
+							<span class="page-right">></span>
+						</div>
+					</div>
+					<div class="con-side">
+						<div class="side-top">
+							<h2 class="side-top-tit">机构介绍</h2>
+							<p class="side-top-intro">观看下面的视频来了解吧：</p>
+							<img class="side-top-img" src="img/images/video.png" alt="机构介绍" id="videoImg">
+						</div>
+						<div class="side-con">
+							<h2 class="side-con-tit">最热排行</h2>
+							<ul class="side-con-list" id="sideConList">
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_01.png" alt="最热排行" style="transition: margin 0ms">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_02.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_03.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_04.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_05.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_01.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_02.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_03.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_04.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
+								<li class="side-con-listI">
+									<img class="side-img" src="img/images/hot_05.png" alt="最热排行">
+									<div class="side-txtBox">
+										<h3 class="side-txtBox-txt">舞曲音乐揭秘</h3>
+										<p class="side-txtBox-num">
+											<span class="people fa fa-user"></span>
+											<span class="people">1</span>
+										</p>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="page-num">
-					<a><div class="prev"><</div></a>
-					<a><div>1</div></a>
-					<a><div class="active">2</div></a>
-					<a><div>3</div></a>
-					<a><div>4</div></a>
-					<a><div>5</div></a>
-					<a><div>6</div></a>
-					<a><div>7</div></a>
-					<a><div>8</div></a>
-					<a><div class="next">></div></a>
-				</div>
 			</div>
-			<div class="org-introduce">
-				<div class="introduce-title">
-					机构介绍
+
+		</div>
+		<div class="footer">
+			<div class="footer-information">
+				<div class="footer-logo">
+					<img class="footer-logo" src="img/images/footer_logo.png">
+					<h2 class="footer-logo-name">网易教育产品部</h2>
 				</div>
-				<div class="video">
-					<p class="video-word">观看下面的视频来了解吧：</p>
-					<img class="video-pic" src="img/images/video.png">
-				</div>
+				<p>&copy icourse163.org 浙ICP备08114786-1</p>
+				<p>icourse.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
 			</div>
-			<div class="hot-list">
-				<div class="hot-list-title">
-					最热排行
-				</div>
-				<div class="hot-list-pic">
-					<a href="#"><div class="hot-1"></div></a>
-					<a href="#"><div class="hot-2"></div></a>
-					<a href="#"><div class="hot-3"></div></a>
-					<a href="#"><div class="hot-4"></div></a>
-					<a href="#"><div class="hot-5"></div></a>
-					<a href="#"><div class="hot-6"></div></a>
-					<a href="#"><div class="hot-1"></div></a>
-					<a href="#"><div class="hot-2"></div></a>
-					<a href="#"><div class="hot-3"></div></a>
-					<a href="#"><div class="hot-4"></div></a>
-				</div>
+			<div class="web-link">
+				<p class="web-link-title">友情链接：</p>
+				<a class="web-link-address" href="http://open.163.com/" target="_blank">网易公开课</a><br>
+				<a class="web-link-address" href="http://study.163.com/" target="_blank">网易云课堂</a><br>
+				<a class="web-link-address" href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a><br>
+			</div>
+			<div class="us">
+				<p class="web-link-title">我们：</p>
+				<a class="web-link-address" href="#">关于</a><br>
+				<a class="web-link-address" href="#">联系</a><br>
+				<a class="web-link-address" href="#">关注<img class="weibo" src="img/bk_weibo.png"></a>
+			</div>
+			<div class="footer-more">
+				<p class="web-link-title">更多：</p>
+				<a class="web-link-address" href="#">常见问题</a><br>
+				<a class="web-link-address" href="#">意见反馈</a><br>
 			</div>
 		</div>
-	</div>
-	<div class="footer">
-		<div class="footer-information">
-			<div class="footer-logo">
-				<img class="footer-logo" src="img/images/footer_logo.png">
-				<h2 class="footer-logo-name">网易教育产品部</h2>
+		<div class="out" id="out">
+			<div class="out-loginWrap" id="loginWarp">
+				<div class="out-login">
+					<h3 class="out-login-title">登录网易云课堂</h3>
+					<form action="#" method="post" name="out-login">
+						<input class="out-login-ipt" placeholder="账号" type="userName" name="userName">
+						<input class="out-login-ipt" placeholder="密码" type="password" name="password">
+						<button class="out-login-btn" type="submit" name="submit">登录</button>
+					</form>
+					<span class="out-login-close">x</span>
+				</div>
 			</div>
-			<p>&copy icourse163.org 浙ICP备08114786-1</p>
-			<p>icourse.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+			<div class="out-videoBoxWrap" id="videoBoxWrap">
+				<div class="out-videoBox">
+					<h3 class="out-videoBox-tit">请观看下面的视频</h3>
+					<div class="out-videoBox-close">×</div>
+					<video class="out-video" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls="">
+						<object type="video/mp4">
+					    <param name="src" value="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">
+					    <param name="autoplay" value="false">
+					    <param name="autoStart" value="0">
+					  </object>
+					</video>
+				</div>
+			</div>	
+			<div class="out-intro" id="outIntro">
+				<div class="out-intro-top clear">							
+					<img class="out-intro-img fl" src="http://img2.ph.126.net/cnq3Tz82Gb7iBi0dL_qUDQ==/4946359765836819167.jpg ">							
+					<div class="out-intro-txtBox fl">								
+						<h3 class="out-intro-txtBox-tit">手绘画系列教程</h3>								
+						<p class="out-intro-txtBox-num">									
+							<span class="people fa fa-user"></span>									
+							<span class="people">57人在学</span>								
+						</p>								
+						<p class="out-intro-txtBox-author">发布者：几分钟网</p>								
+						<p class="out-intro-txtBox-type">分类：手绘设计</p>							
+					</div>
+				</div> 						
+				<p class="out-intro-bottom">生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！</p>
+			</div>	
 		</div>
-		<div class="web-link">
-			<p class="web-link-title">友情链接：</p>
-			<a class="web-link-address" href="http://open.163.com/" target="_blank">网易公开课</a><br>
-			<a class="web-link-address" href="http://study.163.com/" target="_blank">网易云课堂</a><br>
-			<a class="web-link-address" href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a><br>
-		</div>
-		<div class="us">
-			<p class="web-link-title">我们：</p>
-			<a class="web-link-address" href="#">关于</a><br>
-			<a class="web-link-address" href="#">联系</a><br>
-			<a class="web-link-address" href="#">关注<img class="weibo" src="img/bk_weibo.png"></a>
-		</div>
-		<div class="footer-more">
-			<p class="web-link-title">更多：</p>
-			<a class="web-link-address" href="#">常见问题</a><br>
-			<a class="web-link-address" href="#">意见反馈</a><br>
-		</div>
-	</div>
-</body>
-	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-</html>
+	</body>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+	</html>
