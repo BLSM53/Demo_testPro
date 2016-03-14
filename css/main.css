@@ -47,8 +47,6 @@ html {
 	cursor: pointer;
 }
 
-
-
 .header{
 	height:89px;
 	line-height: 89px;
@@ -56,7 +54,6 @@ html {
 	margin-left: auto; 
 	margin-right: auto;
 	overflow: hidden;
-	zoom: 1;
 }
 
 .header-logo{
@@ -151,25 +148,12 @@ html {
 	text-decoration: none; 
 }
 
-.header-search{
+.search{
 	width: 19px;
 	height: 19px;
 	margin: 35px 15px 0 30px;
 	cursor:pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .center {
 	position: relative;
@@ -366,11 +350,6 @@ html {
 	list-style: none;
 }
 
-
-
-
-
-
 .center-course {
 	background: #f8f8f8;
 }
@@ -381,7 +360,6 @@ html {
 	margin-left: auto; 
 	margin-right: auto;
 	overflow: hidden;
-	zoom: 1;
 }
 
 .course-main {
@@ -397,7 +375,6 @@ html {
 	border: 1px solid #d4d3d3;
 	border-top: none;
 	box-shadow: 2px 2px 5px #ecebeb;
-	zoom: 1;
 }
 
 .course-type-name-active, .course-type-name{
@@ -421,7 +398,6 @@ html {
 	height: 1240px;
 	width: 850px;
 	overflow: hidden;
-	zoom: 1;
 }
 
 .course-main-list{
@@ -714,8 +690,8 @@ html {
 
 .hide-login-close{
 	position: absolute;
-	top: -2px;
-	right: 18px;
+	top: 8px;
+	right: 24px;
 	width: 11px;
 	height: 11px;
 	font-size: 22px;
@@ -758,7 +734,7 @@ html {
 .hide-video-close{
 	position: absolute;
 	top: 6px;
-	right: 12px;
+	right: 25px;
 	width: 10px;
 	height: 10px;
 	font-size: 26px;
@@ -792,7 +768,6 @@ html {
 	background: #fff;
 	padding-right: 34px;
 	padding-bottom: 25px;
-	zoom: 1;
 }
 
 .hide-introduce-txtBox{
@@ -819,15 +794,6 @@ html {
 	overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
-
 .footer {
 	width: 100%;
 	background: #2c3339;
@@ -839,7 +805,7 @@ html {
 	width: 395px;
 	height: 100px;
 	padding-top: 93px;
-	margin-left: 256px;
+	margin-left: 286px;
 	font-size: 13px;
 	color: #fff;
 }
@@ -866,7 +832,7 @@ html {
 	float: right;
 	width: 210px;
 	height: 100px;
-	margin-right: 170px;
+	margin-right: 626px;
 	margin-top: -105px;
 }
 
@@ -892,7 +858,7 @@ html {
 	float: right;
 	width: 134px;
 	height: 100px;
-	margin-right: 46px;
+	margin-right: 528px;
 	margin-top: -105px;
 }
 
@@ -910,5 +876,5 @@ html {
 	width: 64px;
 	height: 100px;
 	margin-top: -105px;
-	margin-right: -16px;
+	margin-right: 457px;
 }

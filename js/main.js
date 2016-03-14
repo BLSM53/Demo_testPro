@@ -12,9 +12,9 @@ window.onload = function(){
 	}
 };
 
-/*
- *@method 功能:cookie
-**/
+
+ //操作cookie
+
 (function(){
 	GLOBAL.COOKIE = {};
 	GLOBAL.COOKIE.setCookie = setCookie;
@@ -23,7 +23,7 @@ window.onload = function(){
 	function setCookie(name,value,iDay){
 		var oDate = new Date();
 		oDate.setDate(oDate.getDate()+iDay);
-		document.cookie = name+'='+escape(value)+';expires='+oDate;
+		document.cookie = name+'='+value+';expires='+oDate;
 	}	
 	function getCookie(name){
 		var arr = document.cookie.split('; ');
@@ -40,9 +40,8 @@ window.onload = function(){
 	}	
 })();
 
-/*
- *@method 功能:关闭顶部弹窗
-**/
+//关闭顶部弹窗
+
 (function(){
 	var oTop = document.getElementById('popup');
 	var oClose = document.getElementById('close');
@@ -56,9 +55,8 @@ window.onload = function(){
 
 
 
-/*
- *@method 功能:轮播图
-**/
+//轮播图
+	
 (function(){
 	//元素获取
 	var oBanner = document.getElementById('banner');
