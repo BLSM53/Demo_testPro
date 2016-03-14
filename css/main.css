@@ -2,8 +2,7 @@ body {
 	display: block;
 	width: 100%;
 	min-height: 2910px;
-	min-width: 1617px;
-	background: #f8f8f8;
+	min-width: 1208px;
 	font-family: "微软雅黑";
 }
 
@@ -11,11 +10,41 @@ html {
 	height: 2912px;
 	width: 100%;
 	min-height: 2912px;
-	min-width: 1617px;
+	min-width: 1208px;
+}
+
+@media screen and (max-width: 1366px) {
+
+	.course {
+		width: 970px;
+		margin: 0 auto;
+	}
+
+	.course-main {
+		width: 728px;
+		height: 1310px;
+	}
+
+	.course-main-table {
+		height: 1173px;
+		width: 735px;
+	}
+
+	.main-page {
+		margin-top: 10px;
+		text-align: right;
+	}
+	
+	.work-space-table {
+		margin-left: -190px;
+	}
+
 }
 
 .popup {
 	width: 100%;
+	min-width: 1208px;
+	overflow: hidden;
 	height: 37px;
 	background: url(../img/bk_popupBk.jpg);
 	background-size: cover;
@@ -158,7 +187,9 @@ html {
 .center {
 	position: relative;
 	height: 2572px;
-	width: 1617px;
+	width: 100%;
+	min-width: 1208px;
+	overflow: hidden;
 	margin: 0 auto;
 }
 
@@ -214,7 +245,8 @@ html {
 }
 
 .product {
-	width: 1617px;
+	margin: 0 auto;
+	width: 1212px;
 	height: 299px;
 	vertical-align: middle;
 }
@@ -225,9 +257,7 @@ html {
 	color: gray;
 	width: 348px;
 	height: 244px;
-	margin-left: 208px;
 	margin-right: 20px;
-	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
@@ -310,7 +340,6 @@ html {
 	height: 244px;
 	margin-left: 54px;
 	margin-right: 20px;
-	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
@@ -322,24 +351,31 @@ html {
 	height: 244px;
 	margin-left: 54px;
 	margin-right: 20px;
-	background: #f8f8f8;
 	padding-top: 55px;
 	line-height: 23px;
 }
 
 .work-space {
 	position: relative;
+	min-width: 1208px;
 	height: 301px;
-	width: 1615px;
+	width: 100%;
 	text-align: center;
 	background: #f8f8f8;
+	overflow: hidden;
+}
+
+.work-space-img {
+	width: 1615px;
+	height: 220px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 .work-space-table {
 	width: 1615px;
 	height: 220px;
 	position: relative;
-	margin: 0;
 	overflow: hidden;
 }
 
@@ -356,16 +392,17 @@ html {
 
 .course {
 	height: 1512px;
-	width: 1208px; 
-	margin-left: auto; 
-	margin-right: auto;
+	max-width: 1208px; 
+	margin: 0 auto;
 	overflow: hidden;
 }
 
 .course-main {
-	width: 980px;
+	max-width: 980px;
+	max-height: 1279px;
 	float: left;
 	color: #666;
+	overflow: hidden;
 }
 
 .course-type {
@@ -395,8 +432,9 @@ html {
 }
 
 .course-main-table {
-	height: 1240px;
-	width: 850px;
+	max-height: 1240px;
+	max-width: 980px;
+	z-index: 1;
 	overflow: hidden;
 }
 
@@ -411,14 +449,11 @@ html {
 	box-shadow: 0 1px 1px #f1f1f1;
 	background-color: #fff;	
 	cursor: pointer;
+	
 }
 
 .course-main-list:hover{
 	box-shadow: 0 2px 20px #e6e6e6,0 -2px 20px #e6e6e6;
-	color: #39a030;
-}
-
-.course-main-list:hover{
 	color: #39a030;
 }
 
@@ -469,8 +504,6 @@ html {
 }
 
 .main-page {
-	padding-top: 9px;
-	padding-right: 18px;
 	text-align: right;
 }
 
@@ -534,8 +567,7 @@ html {
 }
 
 .course-side {
-	width: 225px;
-	float: right;
+	float: left;
 }
 
 .company-introduce {
@@ -752,9 +784,14 @@ html {
 	display: none;
 	position: absolute;
 	background: #fff;
-	z-index: 1;
+	min-height: 225px;
+	z-index: 99;
 	border: 1px solid #d1d0d0;
 	box-shadow: 1px 1px 3px #eeedee,-1px -1px 3px #eeedee;
+}
+
+.hide-introduce:hover {
+	cursor: pointer;
 }
 
 .hidehide-introduce-title{
@@ -787,6 +824,7 @@ html {
 
 .hide-introduce-bottom{
 	width: 418px;
+	min-height: 60px;
 	padding: 12px 40px 18px 21px;
 	background: #f8f8f8;
 	font-size: 14px;
@@ -796,16 +834,22 @@ html {
 
 .footer {
 	width: 100%;
+	min-width: 1208px;
 	background: #2c3339;
 	height: 297px;
 	left: 200px;
+	overflow: hidden;
+}
+
+.footer-infor {
+	width: 950px;
+	margin: 0 auto;
 }
 
 .footer-information {
 	width: 395px;
 	height: 100px;
 	padding-top: 93px;
-	margin-left: 286px;
 	font-size: 13px;
 	color: #fff;
 }
@@ -832,7 +876,7 @@ html {
 	float: right;
 	width: 210px;
 	height: 100px;
-	margin-right: 626px;
+	margin-right: 169px;
 	margin-top: -105px;
 }
 
@@ -858,8 +902,8 @@ html {
 	float: right;
 	width: 134px;
 	height: 100px;
-	margin-right: 528px;
 	margin-top: -105px;
+	margin-right: 71px;
 }
 
 .weibo {
@@ -876,5 +920,4 @@ html {
 	width: 64px;
 	height: 100px;
 	margin-top: -105px;
-	margin-right: 457px;
 }

@@ -403,18 +403,18 @@ window.onload = function(){
 			var testDiv =aLi[i].getElementsByTagName('div')[0]; 
 			aLi[i].index = i;
 			//鼠标移入时,详情菜单显示
-			aLi[i].onmouseover = function(){
+			aLi[i].onmousemove = function(){
 				var dataDiv = this.getElementsByTagName('h4')[0];
 				var temp = getPos(this);
-				var x = temp.left + 240 + 'px';
-				var y = temp.top + 'px';
+				var x = temp.left + (-10) + 'px';
+				var y = temp.top + (-10) +'px';
 				var html = outIntro.innerHTML = '';
-				html +='<div class="hide-introduce-top clear">\
-							<img class="hidehide-introduce-title fl" src="'+ dataDiv.getAttribute('data-bigphotourl')+'">\
-							<div class="hide-introduce-txtBox fl">\
+				html +='<div class="hide-introduce-top">\
+							<img class="hidehide-introduce-title" src="'+ dataDiv.getAttribute('data-bigphotourl')+'">\
+							<div class="hide-introduce-txtBox">\
 								<h3 class="hide-introduce-txtBox-tit">'+ dataDiv.getAttribute('data-name') +'</h3>\
 								<p class="hide-introduce-txtBox-num">\
-									<span class="hide-introduce-txtBox-ico vm"></span>\
+									<span class="hide-introduce-txtBox-ico people"></span>\
 									<span class="people">'+dataDiv.getAttribute('data-learnercount')+'人在学</span>\
 								</p>\
 								<p class="hide-introduce-txtBox-author">发布者：'+dataDiv.getAttribute('data-provider') +'</p>\
@@ -423,11 +423,11 @@ window.onload = function(){
 						<p class="hide-introduce-bottom">'+dataDiv.getAttribute('data-description')+'</p>';
 				outIntro.innerHTML = html;	
 				outIntro.style.cssText = 'display: block; left:'+x+';top:'+ y +';';	
-			}
+			};
 			//鼠标移入时,详情菜单显示
-			aLi[i].onmouseout = function(){
+			outIntro.onmouseout = function(){
 				outIntro.style.cssText = '';
-			}			
+			}
 		}			
 	}
 })();
