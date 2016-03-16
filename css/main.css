@@ -16,18 +16,18 @@ html {
 @media screen and (max-width: 1366px) {
 
 	.course {
-		width: 970px;
+		width: 980px;
 		margin: 0 auto;
 	}
 
 	.course-main {
-		width: 728px;
+		width: 748px;
 		height: 1310px;
 	}
 
 	.course-main-table {
 		height: 1173px;
-		width: 735px;
+		width: 747px;
 	}
 
 	.main-page {
@@ -38,7 +38,14 @@ html {
 	.work-space-table {
 		margin-left: -190px;
 	}
+	
+	.hide-detail {
+		width: 441px;
+	}
 
+	.hide-detail-description {
+		width: 420px;
+	}
 }
 
 .popup {
@@ -392,22 +399,24 @@ html {
 
 .course {
 	height: 1512px;
-	max-width: 1208px; 
+	max-width: 1228px; 
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 .course-main {
-	max-width: 980px;
-	max-height: 1279px;
+	position: relative;
+	z-index: 2;
+	max-width: 1000px;
+	max-height: 1299px;
 	float: left;
 	color: #666;
-	overflow: hidden;
 }
 
 .course-type {
 	width: 400px;
 	height: 50px;
+	margin-left: 10px;
 	margin-bottom: 28px;
 	border: 1px solid #d4d3d3;
 	border-top: none;
@@ -432,13 +441,15 @@ html {
 }
 
 .course-main-table {
+	position: relative;
+	padding: 10px;
 	max-height: 1240px;
-	max-width: 980px;
-	z-index: 1;
-	overflow: hidden;
+	max-width: 1000px;
+	z-index: 2;
 }
 
 .course-main-list{
+	position: relative;
 	float: left;
 	width: 223px;
 	margin-right: 18px;
@@ -449,12 +460,72 @@ html {
 	box-shadow: 0 1px 1px #f1f1f1;
 	background-color: #fff;	
 	cursor: pointer;
-	
 }
 
 .course-main-list:hover{
 	box-shadow: 0 2px 20px #e6e6e6,0 -2px 20px #e6e6e6;
 	color: #39a030;
+}
+
+.course-main-list:hover .hide-detail{
+	display: block;
+	position:absolute; 
+	top:-10px; 
+	left:-10px; 
+	width:461px; 
+	min-height:218px; 
+	background:#fff; 
+	padding:10px 10px 0 10px; 
+	box-shadow:0 0 2px 1px #d3d1d2; 
+	z-index:5;
+}
+
+.hide-detail { 
+	display: none;
+}
+
+.hide-detail-img {
+	float: left;
+	width: 223px;
+	height: 124px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.hide-detail-title {
+	display: block;
+	min-height: 52px;
+	font-size: 20px;
+	line-height: 26px;
+	margin: 0 10px 3px 223px;
+	color: #666;
+}
+
+.hide-detail-student {
+	font-size: 16px;
+	line-height: 12px;
+	border: none;
+	color: #666;
+}
+
+.hide-detail-source {
+	height: 40px;
+	font-size: 13px;
+	line-height: 24px;
+	padding: 10px 0 0 223px;
+	color: #666;
+}
+
+.hide-detail-description {
+	clear: both;
+	width: 441px;
+	color: #666;
+	font-size: 14px;
+	line-height: 24px;
+	min-height: 81px;
+	margin-left: -10px;
+	padding: 10px 20px 10px 20px;
+	background: #f8f8f8;
 }
 
 .course-information {
@@ -494,7 +565,12 @@ html {
 	font-size: 10px;
 }
 
+.hide-detail-student {
+	color: #999;
+}
+
 .people {
+	color: #999;
 	vertical-align: middle;
 }
 
@@ -647,7 +723,6 @@ html {
 }
 
 .hot-course-introduce-tit{
-	display: inline;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

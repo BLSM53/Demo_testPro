@@ -1,17 +1,69 @@
 
 var GLOBAL = {};
+var oScreen;
+var	aWidth = document.body.clientWidth;
 
 window.onload = function(){
-	var oTop = document.getElementById('popup');
-	var aClose = GLOBAL.COOKIE.getCookie('topValue');
-	if (aClose == 'none') {
-		oTop.style.display = 'none';
+	var oMain = document.getElementById('mainBox');
+	var oMainList = oMain.getElementsByTagName('li');
+	var oScreen = document.body.clientWidth;
+
+	if (oScreen<=1366) {
+		if (oMainList.length==20) {
+			for (var i = 0; i < 5; i++) {
+				oMain.removeChild(oMainList[19-i]);
+			}
+		}
 	}
-	else{
-		oTop.style.display = 'block';
+
+	var html3 = oMain.innerHTML;
+
+	if (oScreen>1366) {
+		if (oMainList==15) {
+			for (var i = 0; i < 5; i++) {
+				html3 += '<li class="course-main-list">\
+								<img class="course-img" src="img/images/course_01.png" alt="网易云课堂">\
+								<div class="course-information">\
+									<h3 class="course-name">手绘系列教程</h3>\
+									<p class="course-source">几分钟网</p>\
+									<p class="course-student-num">\
+										<span class="people fa fa-user"></span>\
+										<span>445</span>\
+									</p>\
+									<p class="course-price">￥0</p>\
+								</div>\
+								<div class="hide-detail">\
+									<img class="hide-detail-img" src="img/images/course_01.png" alt="网易云课堂">\
+									<h3 class="hide-detail-title">手绘系列教程</h3>\
+									<span class="hide-detail-student  fa fa-user">445人在学\
+									</span>\
+									<p class="hide-detail-source">\
+										发布者:极客公园\
+										<br>\
+										分类：无\
+									</p>\
+									<p class="hide-detail-description">\
+											生活中不乏有很多美好的画面，何不用画笔记录下来呢？那就跟几分钟网一起来记录美好画面吧！\
+									</p>\
+								</div>\
+							</li>';
+			}
+		}
 	}
 };
 
+window.onresize = function(){
+	oScreen = document.body.clientWidth;
+	if (oScreen<=1366 && aWidth>1366) {
+		location.reload();
+		aWidth = oScreen;
+	}
+
+	if (oScreen>1366 && aWidth<=1366) {
+		location.reload();
+		aWidth = oScreen;
+	}
+};
 
  //操作cookie
 
@@ -164,7 +216,7 @@ window.onload = function(){
 	var object = document.getElementsByTagName('object')[0];
 	//点击图片时，弹出out-hideVideo
 	oVideoImg.onclick = function(){
-		oVideoBoxWrap.style.cssText = "background-color: rgba(0,0,0,0.5);z-index:1";
+		oVideoBoxWrap.style.cssText = "background-color: rgba(0,0,0,0.5);z-index:10";
 		oVideoBox.style.cssText = "transform:  scale(1) ";
 		oVideoBox.style.visibility = 'visible';
 		object.style.display = 'block';
@@ -185,26 +237,56 @@ window.onload = function(){
  *@method 功能:获取课程列表
 **/
 (function(){
+	var oScreen = document.body.clientWidth;
+
 	GLOBAL.NEW = {};
 	var pageNo = 2;
-	var psize = 20;
+	var psize;
 	var type = 10;
+
+	if (oScreen>1366) { 
+		psize = 20; 
+	}
+
+	else { 
+		psize = 15; 
+	}
+
 	GLOBAL.NEW.pageNo = pageNo;
 	GLOBAL.NEW.psize = psize;
 	GLOBAL.NEW.type = type;
 	GLOBAL.NEW.fnNew = fnNew;
 	//运行ajax函数
-	GLOBAL.AJAX({
-	   	url : 'http://study.163.com/webDev/couresByCategory.htm',
-		data : {
-		    'pageNo':2,
-		    'psize':20,
-		    'type':10
-		},
-	    success : function(data){
-	       fnNew(data);
-	    }
-	});
+	
+	if (oScreen>1366) { 
+		GLOBAL.AJAX({
+		   	url : 'http://study.163.com/webDev/couresByCategory.htm',
+			data : {
+			    'pageNo':2,
+			    'psize':20,
+			    'type':10
+			},
+		    success : function(data){
+		       fnNew(data);
+		    }
+		});
+	}
+
+	else {  
+		GLOBAL.AJAX({
+		   	url : 'http://study.163.com/webDev/couresByCategory.htm',
+			data : {
+			    'pageNo':2,
+			    'psize':15,
+			    'type':10
+			},
+		    success : function(data){
+		       fnNew(data);
+		    }
+		});
+	}
+	
+	
 
 	//构建html结构
 	function fnNew(data){
@@ -222,30 +304,23 @@ window.onload = function(){
 							</p> \
 							<p class="course-price">￥'+data.list[i].price+'</p> \
 							<h4 style="display:none" data-name ="'+data.list[i].name+'" data-bigPhotoUrl="'+data.list[i].bigPhotoUrl+' "data-provider="' + data.list[i].provider + '" data-learnerCount="'+ data.list[i].learnerCount +'"data-price ="'+data.list[i].price+'" data-categoryName='+data.list[i].categoryName+' data-description = "'+data.list[i].description+'"></h4> \
-						</div></li>';
-
+						</div>\
+							<div class="hide-detail">\
+									<img class="hide-detail-img" src="'+data.list[i].bigPhotoUrl +'" alt="网易云课堂">\
+									<h3 class="hide-detail-title">'+ data.list[i].name +'</h3>\
+									<span class="hide-detail-student  fa fa-user">' + data.list[i].learnerCount + '人在学\
+									</span>\
+									<p class="hide-detail-source">\
+										发布者:'+ data.list[i].provider+'\
+										<br>\
+										分类：'+data.list[i].categoryName+'\
+									</p>\
+									<p class="hide-detail-description">\
+											'+data.list[i].description+'</p>\
+								</div>\
+						</li>';
 		};	
-		oUl.innerHTML = html;
-		var html2 = '';
-		var ele = document.createElement('div');
-		ele.className = "hide-introduce";
-		ele.id = "outIntro";
-		html2 +='<div class="hide-introduce-top clear"> \
-					<img class="hidehide-introduce-title fl" src=""> \
-					<div class="hide-introduce-txtBox fl"> \
-						<h3 class="hide-introduce-txtBox-tit"></h3> \
-						<p class="hide-introduce-txtBox-num"> \
-							<span class="hide-introduce-txtBox-icon vm"></span> \
-							<span class="vm"></span> \
-						</p> \
-						<p class="hide-introduce-txtBox-author"></p> \
-						<p class="hide-introduce-txtBox-type"></p> \
-					</div> \
-				</div> \
-				<p class="hide-introduce-bottom"></p>';
-		ele.innerHTML = html2;
-		document.getElementById('hide').appendChild(ele);
-		GLOBAL.MOVE();	
+		oUl.innerHTML = html;	
 	}
 
 
@@ -378,7 +453,7 @@ window.onload = function(){
 
 /*
  *@method 功能:关于课程的鼠标移入移出事件
-**/
+
 (function(){
 	GLOBAL.MOVE = fnMove;
 	function fnMove(){
@@ -431,6 +506,7 @@ window.onload = function(){
 		}			
 	}
 })();
+*/
 
 
 /*
