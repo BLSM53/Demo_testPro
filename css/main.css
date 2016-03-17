@@ -565,13 +565,12 @@ html {
 	font-size: 10px;
 }
 
-.hide-detail-student {
+.fa {
 	color: #999;
 }
 
-.people {
+.hide-detail-student {
 	color: #999;
-	vertical-align: middle;
 }
 
 .course-price {
@@ -704,6 +703,7 @@ html {
 	padding-bottom: 20px;
 	overflow: hidden;
 	transition: 200ms margin;
+	clear: both;
 }
 
 .hot-course-list:hover {

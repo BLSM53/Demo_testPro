@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" target="_blank"/>
 		<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css" target="_blank"/>
 	</head>
+
 	<body>
 		<div class="popup" id="popup">
 			<p class="smart-spec">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</p>
@@ -51,9 +52,9 @@
 					</a>
 				</nav>
 				<ul class="banner-con">
-					<li class="banner-dot-active"></li>
-					<li class="banner-dot"></li>
-					<li class="banner-dot"></li>
+					<li class="banner-dot-active" index=''></li>
+					<li class="banner-dot" index=''></li>
+					<li class="banner-dot" index=''></li>
 				</ul>
 			</div>
 			<div class="product">
@@ -793,18 +794,18 @@
 				<div class="hide-login">
 					<h3 class="hide-login-title">登录网易云课堂</h3>
 					<form action="#" method="post" name="hide-login">
-						<input class="hide-login-input" placeholder="账号" type="userName" name="userName" value="studyOnline">
-						<input class="hide-login-input" placeholder="密码" type="password" name="password" value="study.163.com">
-						<button class="hide-login-btn" type="submit" name="submit">登录</button>
+						<input id="hideLoginInput" class="hide-login-input" placeholder="账号" type="userName" name="userName" value="studyOnline">
+						<input id="hideLoginPass" class="hide-login-input" placeholder="密码" type="password" name="password" value="study.163.com">
+						<button id="hideLoginBtn" class="hide-login-btn" type="submit" name="submit">登录</button>
 					</form>
-					<span class="hide-login-close">x</span>
+					<span id="hideLoginClose" class="hide-login-close">x</span>
 				</div>
 			</div>
 			<div class="hide-video" id="hideVideo">
 				<div class="hide-video-box">
 					<h3 class="hide-video-para">请观看下面的视频</h3>
 					<div class="hide-video-close">×</div>
-					<video class="hide-video-play" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls="">
+					<video class="hide-video-play" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls="" id="video">
 						<object type="video/mp4">
 						    <param name="src" value="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">
 						    <param name="autoplay" value="false">
@@ -815,7 +816,39 @@
 			</div>	
 		</div>
 	</body>
-		
+
 		<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.timers-1.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-	</html>
+<script type="text/template" id='courseInfoTmp'>
+	<% for (var i = 0; i < count; i++) { %>
+		<li class="course-main-list">
+			<img class="course-img" src="<%= data.list[i].bigPhotoUrl %>">
+				<div class="course-information">
+					<h3 class="course-name"> <%= data.list[i].name %></h3>
+					<p class="course-source"><%= data.list[i].provider %></p>
+					<p class="course-student-num">
+						<span class="people fa fa-user"></span>
+						<span class="vm"><%= data.list[i].learnerCount %></span>
+					</p>
+						<p class="course-price">￥<%=data.list[i].price %>/p>
+						<h4 style="display:none" data-name ="<%= data.list[i].name%>" data-bigPhotoUrl="<%=data.list[i].bigPhotoUrl%> "data-provider="<%= data.list[i].provider %>" data-learnerCount="<%= data.list[i].learnerCount %>"data-price ="<%= data.list[i].price%>" data-categoryName="<%= data.list[i].categoryName %>" data-description = "<%=data.list[i].description%>"></h4>
+				</div>
+				<div class="hide-detail">
+					<img class="hide-detail-img" src="<%= data.list[i].bigPhotoUrl %>" alt="网易云课堂">
+					<h3 class="hide-detail-title"><%= data.list[i].name %></h3>
+					<span class="hide-detail-student  fa fa-user"><%= data.list[i].learnerCount %>人在学</span>
+					<p class="hide-detail-source">
+						发布者:<%= data.list[i].provider%>
+						<br>
+						分类：<%=data.list[i].categoryName%>
+					</p>
+					<p class="hide-detail-description"><%=data.list[i].description%></p>
+				</div>
+		</li>
+	<% } %>
+</script>
+</html>
